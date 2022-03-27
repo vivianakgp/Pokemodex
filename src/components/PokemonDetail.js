@@ -7,19 +7,19 @@ import axios from 'axios';
 
 function PokemonDetail() {
     const [ pokemonDetail , setPokemonDetail ] = useState({})
-    const { name } = useParams();
+    const { id } = useParams();
 
     useEffect(()=>{
-        axios.get(`https://pokeapi.co/api/v2/berry/${name}/`)
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
             .then(res =>{
                 console.log(res.data);
                 setPokemonDetail(res.data);
             })
-    },[ name ])
+    },[ id ])
     return (
     <div className='PokemonDetail'>
-        <h2>404 page not found</h2>
-        <p>Seleccionaste el usuario con el id {name}</p>
+        <h2>details</h2>
+        <p>{`Seleccionaste el usuario con el id: ${id}`} </p>
         <h2>{pokemonDetail.name}</h2>
         
     </div>
