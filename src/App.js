@@ -4,17 +4,13 @@ import {
   Route,
   useParams
 } from 'react-router-dom';
-
+import ProtectedRoutes from './components/ProtectedRoute';
 import Home from './components/Home';
 import Pokedex from './components/Pokedex';
 import PokemonDetail from './components/PokemonDetail';
-import ProtectedRoutes from './components/ProtectedRoute';
-
-
 
 function App() {
   const { id } = useParams();
-  
   return (
     <HashRouter>
       <div className='App'>

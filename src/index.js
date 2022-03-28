@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
-// import './index.css';
 import App from './App';
+import './index.css';
 // Aquí importamos el reducer creado anteriormente
 import rootReducer from './redux/index' ;
 
