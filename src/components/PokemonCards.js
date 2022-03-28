@@ -9,7 +9,7 @@ function PokemonCards({pokeUrl}) {
     const [ pokemon, setPokemon ] = useState({});
     useEffect(()=>{
         axios.get(pokeUrl).then(res => {
-                // console.log(res.data);
+                console.log(res.data);
                 setPokemon(res.data)
             })
     },[pokeUrl])

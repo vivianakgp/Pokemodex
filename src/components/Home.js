@@ -1,10 +1,9 @@
-// Crear la ruta raíz /. Será una ruta pública, en la que sólamente contendrá
-// un input que le preguntará el nombre al usuario.
-// Dicho nombre se almacenará en la store de redux, 
-// y será obligatorio para que pueda acceder a las rutas protegidas.
+
 import React, {useState}from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import pokedexImg from '../assets/pokedex.png';
+import pokebol from '../assets/purepng.webp';
 
 function Home() {
     const [ nameValue, setNameValue ] = useState('')
@@ -22,10 +21,22 @@ function Home() {
     };
     return (
     <div className='Home'>
-        <form action='' onSubmit={chageGlobalState}>
-            <input type='text' value={nameValue} required onChange={(e)=>setNameValue(e.target.value)}/>
-            <button type='submit'>enter</button>
-        </form>
+        <div className='container'>
+            <div className='containerImg'>
+                <img src={pokedexImg} alt='logoPokedex'/>
+            </div>
+            <h1>¡Hola entrenador!</h1>
+            <p>Para poder comenzar, dame tu nombre</p>
+            <form action='' onSubmit={chageGlobalState}>
+                <input type='text' value={nameValue} placeholder='Tu nombre...' required onChange={(e)=>setNameValue(e.target.value)}/>
+                <button type='submit'>Comenzar</button>
+            </form>
+        </div>
+        <footer>
+            
+            <div className='redBlock'><img src={pokebol} /></div>
+            <div className='blackBlock'></div>
+        </footer>
     </div>
     );
 }

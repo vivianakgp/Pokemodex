@@ -2,7 +2,7 @@ import {
   HashRouter,
   Routes,
   Route,
-  useParams
+  // useParams
 } from 'react-router-dom';
 import ProtectedRoutes from './components/ProtectedRoute';
 import Home from './components/Home';
@@ -10,12 +10,11 @@ import Pokedex from './components/Pokedex';
 import PokemonDetail from './components/PokemonDetail';
 
 function App() {
-  const { name } = useParams();
+  // const { name } = useParams();
   return (
     <HashRouter>
       <div className='App'>
-          <header>HEADER</header>
-          <p>{name}</p>
+          {/* <p>{name}</p> */}
           <Routes>
             <Route path='/' element={<Home />} />
             <Route element={<ProtectedRoutes />}>
@@ -23,7 +22,6 @@ function App() {
               <Route path='/pokedex/:name' element={<PokemonDetail />} />
             </Route>
           </Routes>
-          <footer>FOOTER</footer> 
       </div>
     </HashRouter>
   );

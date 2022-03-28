@@ -1,4 +1,5 @@
 @use './components/Pokedex';
+@use './components/Home';
 @use './components/PokemonCards';
 @use './components/PokemonDetails';
 
@@ -8,6 +9,6 @@
     box-sizing: border-box;
 }
 .App{
-    background-color: black;
-    color: beige;
+    min-width: 320px;
+    overflow-y: hidden;
 }
