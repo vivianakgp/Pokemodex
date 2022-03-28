@@ -1,11 +1,9 @@
-// Le dará un mensaje de bienvenida al usuario ingresado anteriormente.
-// Listará los pokemones traídos desde la pokeapi. Cada tarjeta será un link que llevará a
-// “/pokedex/:id”, con el id del pokemon de la tarjeta. Estos pokemones deben estar paginados
+
 import React, { useEffect, useState } from 'react';
-// import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import SearchBox from './SearchBox';
+import SelectBox from './SelectBox';
 import PokedexCards from './PokemonCards';
 
 function Pokedex() {
@@ -14,17 +12,21 @@ function Pokedex() {
     useEffect(()=>{
         axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=20')
             .then(res =>{
-                console.log(res.data.results);
+                // console.log(res.data.results);
                 setPokemons(res.data.results)
             })
-    },[])
+    },[]);
+    const newPokemonsByType = (typePokemon )=>{
+        setPokemons(typePokemon)
+    };
     return (
     <div className='Pokedex'>
         <h1>Pokedex</h1>
         <h3>{`Welcome ${userName}`}</h3>
         <SearchBox />
+        <SelectBox newPokemonsByType={newPokemonsByType}/>
         <div  className='PokedexList'>{
-            pokemons.map(pokemon => <PokedexCards key={pokemon.url} pokeUrl={pokemon.url}/>)
+            pokemons.map(pokemon => <PokedexCards key={pokemon.url?pokemon.url:pokemon.pokemon.url } pokeUrl={pokemon.url? pokemon.url:pokemon.pokemon.url}/>)
         }</div>
     </div>
     );
