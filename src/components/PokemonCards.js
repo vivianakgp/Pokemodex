@@ -9,14 +9,14 @@ function PokemonCards({pokeUrl}) {
     const [ pokemon, setPokemon ] = useState({});
     useEffect(()=>{
         axios.get(pokeUrl).then(res => {
-                // console.log(res.data);
+                console.log(res.data);
                 setPokemon(res.data)
             })
     },[pokeUrl])
     return (
     <div className='PokemonCards'>
 
-        <Link to={`/pokedexDetail/${pokemon.id}`}>
+        <Link to={`/pokedex/${pokemon.name}`}>
             <h1>{pokemon.name}</h1>
             <img src={pokemon.sprites?.back_default} alt='pokemon'/>
         </Link>

@@ -10,17 +10,17 @@ import Pokedex from './components/Pokedex';
 import PokemonDetail from './components/PokemonDetail';
 
 function App() {
-  const { id } = useParams();
+  const { name } = useParams();
   return (
     <HashRouter>
       <div className='App'>
           <header>HEADER</header>
-          <p>{id}</p>
+          <p>{name}</p>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route element={<ProtectedRoutes />}>
               <Route path='/pokedex' element={<Pokedex />} />
-              <Route path='/pokedexDetail/:id' element={<PokemonDetail />} />
+              <Route path='/pokedex/:name' element={<PokemonDetail />} />
             </Route>
           </Routes>
           <footer>FOOTER</footer> 

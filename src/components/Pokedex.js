@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import SearchBox from './SearchBox';
 import PokedexCards from './PokemonCards';
 
 function Pokedex() {
@@ -21,6 +22,7 @@ function Pokedex() {
     <div className='Pokedex'>
         <h1>Pokedex</h1>
         <h3>{`Welcome ${userName}`}</h3>
+        <SearchBox />
         <div  className='PokedexList'>{
             pokemons.map(pokemon => <PokedexCards key={pokemon.url} pokeUrl={pokemon.url}/>)
         }</div>
