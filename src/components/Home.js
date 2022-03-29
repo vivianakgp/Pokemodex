@@ -33,8 +33,7 @@ function Home() {
             </form>
         </div>
         <footer>
-            
-            <div className='redBlock'><img src={pokebol} /></div>
+            <div className='redBlock'><img src={pokebol} alt='pokebola'/></div>
             <div className='blackBlock'></div>
         </footer>
     </div>

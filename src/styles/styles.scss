@@ -1,7 +1,13 @@
-@use './components/Pokedex';
-@use './components/Home';
-@use './components/PokemonCards';
-@use './components/PokemonDetails';
+@use './components/pokedex';
+@use './components/home';
+@use './components/pokemonCards';
+@use './components/pokemonDetails';
+@use './components/animation';
+@use './components/header';
+@use './components/searchBox';
+@use './components/selectBox';
+
+
 
 *{
     margin: 0;

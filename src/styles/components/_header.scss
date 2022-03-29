@@ -1,0 +1,30 @@
+header{
+    width: 100%;
+    height: 80px;
+    .redBlock{
+        height: 60%;
+        background-color:#DD1A1A;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 8px;
+        .logoPokedex{
+            width:160px;
+            height: auto;
+            position:relative;
+            top:12px;
+        }
+        .pokebol{
+            animation: rotate 2s linear infinite;
+            width:50px;
+            height: auto;
+            position:relative;
+            top:24px;
+
+        }
+    }
+    .blackBlock{
+        height: 40%;
+        background-color:#0C0C0C;
+    }
+}

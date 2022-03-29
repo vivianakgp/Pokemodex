@@ -5,7 +5,9 @@ import { useSelector } from 'react-redux';
 import SearchBox from './SearchBox';
 import SelectBox from './SelectBox';
 import PokedexCards from './PokemonCards';
-
+import Header from './Header';
+// import pokebol from '../assets/purepng.webp';
+// import pokedexImg from '../assets/pokedex.png';
 function Pokedex() {
     const [pokemons, setPokemons ]= useState([]);
     const userName = useSelector(state => state.userName);
@@ -19,15 +21,21 @@ function Pokedex() {
     const newPokemonsByType = (typePokemon )=>{
         setPokemons(typePokemon)
     };
+
     return (
     <div className='Pokedex'>
-        <h1>Pokedex</h1>
-        <h3>{`Welcome ${userName}`}</h3>
-        <SearchBox />
-        <SelectBox newPokemonsByType={newPokemonsByType}/>
-        <div  className='PokedexList'>{
-            pokemons.map(pokemon => <PokedexCards key={pokemon.url?pokemon.url:pokemon.pokemon.url } pokeUrl={pokemon.url? pokemon.url:pokemon.pokemon.url}/>)
-        }</div>
+        <Header />
+        <div className='container'>
+            <h2>{<b>{`Bienvenid@ ${userName}, `}</b>}aquí podrás encontrar tu pokemón favorito</h2>
+            <div className='searchBoxes'>
+                <SearchBox />
+                <SelectBox newPokemonsByType={newPokemonsByType}/>
+            </div>
+            <div  className='PokemonList'>{
+                pokemons.map(pokemon => <PokedexCards key={pokemon.url?pokemon.url:pokemon.pokemon.url } pokeUrl={pokemon.url? pokemon.url:pokemon.pokemon.url}/>)
+            }</div>
+        </div>
+
     </div>
     );
 }

@@ -1,13 +1,32 @@
 .Pokedex {
-  background-color: rgba(0, 0, 0, 0.356);
+  font-size: 30px;
+}
+.Pokedex .container {
+  padding: 20px;
+}
+.Pokedex .container h2 {
+  font-size: 0.7em;
+}
+.Pokedex .container h2 b {
+  color: #FE1936;
+}
+.Pokedex .searchBoxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0);
+@media only screen and (min-width: 668px) {
+  .Pokedex .container {
+    padding: 20px 0;
+    max-width: 85%;
+    margin: 0 auto;
+    background-color: rgba(202, 54, 207, 0.507);
   }
-  100% {
-    transform: rotate(360deg);
+  .Pokedex .searchBoxes {
+    flex-direction: row;
   }
 }
 .Home {
@@ -108,6 +127,79 @@
     width: 430px;
   }
 }
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+header {
+  width: 100%;
+  height: 80px;
+}
+header .redBlock {
+  height: 60%;
+  background-color: #DD1A1A;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+header .redBlock .logoPokedex {
+  width: 160px;
+  height: auto;
+  position: relative;
+  top: 12px;
+}
+header .redBlock .pokebol {
+  animation: rotate 2s linear infinite;
+  width: 50px;
+  height: auto;
+  position: relative;
+  top: 24px;
+}
+header .blackBlock {
+  height: 40%;
+  background-color: #0C0C0C;
+}
+
+.SearchBox form {
+  min-width: 250px;
+  height: 35px;
+  position: relative;
+}
+.SearchBox form input {
+  width: 100%;
+  height: 100%;
+  border-style: none;
+  border-radius: 12px;
+  padding-left: 15px;
+  border: #b9b9b9 0.5px solid;
+}
+.SearchBox form span {
+  position: absolute;
+  right: 15px;
+  top: calc(50% - 5px);
+  font-size: 20px;
+  color: #c7c7c7;
+}
+
+.SelectBox {
+  min-width: 250px;
+  height: 35px;
+  margin-top: 15px;
+}
+.SelectBox select {
+  width: 100%;
+  height: 100%;
+  border-style: none;
+  border-radius: 12px;
+  padding: 0 10px;
+  border: #b9b9b9 0.5px solid;
+}
+
 * {
   margin: 0;
   padding: 0;
