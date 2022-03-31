@@ -27,8 +27,13 @@ function Home() {
             </div>
             <h1>¡Hola entrenador!</h1>
             <p>Para poder comenzar, dame tu nombre</p>
-            <form action='' onSubmit={chageGlobalState}>
-                <input type='text' value={nameValue} placeholder='Tu nombre...' required onChange={(e)=>setNameValue(e.target.value)}/>
+            {/* action='' */}
+            <form  onSubmit={chageGlobalState}>
+                <input type='text' value={nameValue}
+                placeholder='Tu nombre...' 
+                required
+                onChange={(e)=>setNameValue(e.target.value)}
+                />
                 <button type='submit'>Comenzar</button>
             </form>
         </div>

@@ -1,13 +1,10 @@
 .Pokedex{
     // background-color: rgba(87, 86, 86, 0.986);
     font-size: 30px;
-
     .container{
         padding: 20px;
-        // 
         h2{
         font-size: .7em;
-
             b{
                 color: #FE1936;
             }
@@ -21,10 +18,20 @@
         justify-content: center;
         margin: 20px 0;
     }
+    .PokemonList{
+        // background-color: rgb(12, 11, 11);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
 }
 @media only screen and(min-width:668px){
     .Pokedex{
         // font-size: 40px;
+      
+
 
         .container{
             padding: 20px 0;

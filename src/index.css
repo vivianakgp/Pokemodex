@@ -17,6 +17,13 @@
   justify-content: center;
   margin: 20px 0;
 }
+.Pokedex .PokemonList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
 
 @media only screen and (min-width: 668px) {
   .Pokedex .container {
@@ -127,6 +134,73 @@
     width: 430px;
   }
 }
+.PokemonCard {
+  background-color: #635fa0;
+  width: 190px;
+  padding: 8px;
+  height: 340px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 20px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.PokemonCard .containerImg {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  top: 75px;
+}
+.PokemonCard .containerImg img {
+  width: 100%;
+  height: 100%;
+}
+.PokemonCard .containerInfo {
+  background-color: aliceblue;
+  padding-top: 54px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+.PokemonCard h2 {
+  font-size: 0.9em;
+}
+.PokemonCard h2::first-letter {
+  text-transform: uppercase;
+}
+.PokemonCard h3 {
+  font-size: 0.6em;
+  font-weight: 400;
+  color: #4F4F4F;
+}
+.PokemonCard h3 + p {
+  font-size: 0.3em;
+  margin-bottom: 10px;
+  color: #9F9F9F;
+}
+.PokemonCard .borderTop {
+  padding-top: 10px;
+  margin-bottom: 7px;
+  border-top: #b3b1b1 1px solid;
+  border-radius: 8px 8px 0 0;
+}
+.PokemonCard .secStats {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.6em;
+}
+.PokemonCard .secStats span {
+  text-align: center;
+}
+.PokemonCard .secStats span p {
+  font-size: 0.6em;
+  margin: 0;
+  color: #9F9F9F;
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0);
