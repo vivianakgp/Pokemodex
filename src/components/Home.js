@@ -3,7 +3,7 @@ import React, {useState}from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import pokedexImg from '../assets/pokedex.png';
-import pokebol from '../assets/purepng.webp';
+import pokebol from '../assets/pokeball.png';
 
 function Home() {
     const [ nameValue, setNameValue ] = useState('')

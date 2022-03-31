@@ -1,5 +1,5 @@
 import React from 'react';
-import pokebol from '../assets/purepng.webp';
+import pokebol from '../assets/pokeball.png';
 import pokedexImg from '../assets/pokedex.png';
 
 const Header = () => {
