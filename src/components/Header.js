@@ -6,8 +6,10 @@ const Header = () => {
     return (
         <header>
             <div className='redBlock'>
-                <img className='logoPokedex' src={pokedexImg} alt='logoPokedex' />
-                <img className='pokebol' src={pokebol} alt='pokebola' />
+                <div>
+                    <img className='logoPokedex' src={pokedexImg} alt='logoPokedex' />
+                    <img className='pokebol' src={pokebol} alt='pokebola' />
+                </div>
             </div>
             <div className='blackBlock'></div>
     </header>

@@ -2,29 +2,43 @@ header{
     width: 100%;
     height: 80px;
     .redBlock{
-        height: 60%;
+        height: 68%;
         background-color:#DD1A1A;
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 8px;
-        .logoPokedex{
-            width:160px;
-            height: auto;
-            position:relative;
-            top:12px;
-        }
-        .pokebol{
-            animation: rotate 2s linear infinite;
-            width:50px;
-            height: auto;
-            position:relative;
-            top:24px;
-
+        padding: 0 20px;
+        div{
+            width: 100%;
+            padding: 0 20px;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .logoPokedex{
+                width:160px;
+                height: 40px;
+                position:relative;
+                top:24px;
+            }
+            .pokebol{
+                animation: rotate 2s linear infinite;
+                width:55px;
+                height: auto;
+                position:relative;
+                top:24px;
+            }
         }
     }
     .blackBlock{
-        height: 40%;
+        height: 32%;
         background-color:#0C0C0C;
+    }
+}
+@media only screen and(min-width:668px){
+    header{
+        .redBlock{
+            div{
+                max-width: 85%;
+                padding: 0;
+                margin:0 auto;
+            }
+        }
     }
 }

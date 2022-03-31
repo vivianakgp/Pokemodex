@@ -12,16 +12,28 @@ function PokemonCards({pokeUrl}) {
                 console.log(res.data);
                 setPokemon(res.data)
             })
-    },[pokeUrl])
+    },[pokeUrl]);
+    const pokemonType = pokemon.types?.[0].type.name;
+    console.log( pokemonType)
+    const evaluetBackAccordingTo = () => {
+        switch(pokemonType){
+            case'fire':
+            return 'red';
+            case'grass':
+            return 'green';
+            case'water':
+            return 'blue';
+        }
+    };
     return (
-    <div className='PokemonCard'>
+    <div className='PokemonCard' style={{backgroundColor: evaluetBackAccordingTo()}}>
         <Link style={{textDecoration: 'none'}} to={`/pokedex/${pokemon.name}`} >
             <div className='containerImg'>
                 <img src={pokemon.sprites?.front_default} alt='pokemon'/>
             </div>
             <div className='containerInfo' >
                 <h2>{pokemon.name}</h2>
-                <h3>{pokemon.types?.[0].type.name}</h3>
+                <h3>{pokemonType}</h3>
                 <p>TIPO</p>
                 <p className='secStats borderTop'>
                     <span>

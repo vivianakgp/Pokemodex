@@ -23,7 +23,7 @@ const SelectBox = ({newPokemonsByType})=> {
     return (
         <div className='SelectBox'>
             <select onChange={getPokemons}>
-                <option>Todos los pokemones</option>
+                <option selected disabled>Todos los pokemones</option>
                 {
                 pokemonTypes.map( type =>(
                     <option key={type.url} value={type.url}>{type.name}</option>

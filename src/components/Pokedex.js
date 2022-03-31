@@ -8,10 +8,10 @@ import PokedexCards from './PokemonCards';
 import Header from './Header';
 
 function Pokedex() {
-    const [ pokemons, setPokemons ]= useState([]);
+    const [ pokemons, setPokemons ]  = useState([]);
     const userName = useSelector(state => state.userName);
     useEffect(()=>{
-        axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=40')
+        axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=20')
             .then(res =>{
                 console.log(res.data.results);
                 setPokemons(res.data.results)
