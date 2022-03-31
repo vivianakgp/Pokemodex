@@ -5,10 +5,10 @@
 .Pokedex .container {
   padding: 20px;
 }
-.Pokedex .container h2 {
+.Pokedex .container > h2 {
   font-size: 0.7em;
 }
-.Pokedex .container h2 b {
+.Pokedex .container > h2 b {
   color: #FE1936;
 }
 .Pokedex .searchBoxes {
@@ -137,7 +137,6 @@
   }
 }
 .PokemonCard {
-  background-color: #635fa0;
   width: 190px;
   padding: 8px;
   height: 340px;
@@ -168,6 +167,7 @@
 }
 .PokemonCard h2 {
   font-size: 0.9em;
+  z-index: 100;
 }
 .PokemonCard h2::first-letter {
   text-transform: uppercase;
