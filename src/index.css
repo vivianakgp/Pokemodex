@@ -53,6 +53,7 @@
   width: 100%;
   position: absolute;
   bottom: 0;
+  z-index: 50;
 }
 .Home footer .redBlock {
   background-color: #DD1A1A;
@@ -102,6 +103,8 @@
   border-radius: 10px;
   overflow: hidden;
   font-size: 16px;
+  position: relative;
+  z-index: 100;
 }
 .Home .container form input {
   height: 100%;
@@ -153,20 +156,22 @@
   height: 180px;
   position: relative;
   top: 75px;
+  z-index: 100;
 }
 .PokemonCard .containerImg img {
   width: 100%;
   height: 100%;
 }
 .PokemonCard .containerInfo {
-  background-color: aliceblue;
-  padding-top: 54px;
+  background-color: #FFFFFF;
+  padding-top: 50px;
   padding-bottom: 10px;
   text-align: center;
   border-radius: 8px 8px 0 0;
 }
 .PokemonCard h2 {
-  font-size: 0.9em;
+  position: relative;
+  font-weight: 800;
   z-index: 100;
 }
 .PokemonCard h2::first-letter {
@@ -186,7 +191,6 @@
   padding-top: 10px;
   margin-bottom: 7px;
   border-top: #b3b1b1 1px solid;
-  border-radius: 8px 8px 0 0;
 }
 .PokemonCard .secStats {
   width: 100%;
@@ -197,7 +201,7 @@
 .PokemonCard .secStats span {
   text-align: center;
 }
-.PokemonCard .secStats span p {
+.PokemonCard .secStats span span {
   font-size: 0.6em;
   margin: 0;
   color: #9F9F9F;
@@ -250,6 +254,16 @@ header .blackBlock {
     max-width: 85%;
     padding: 0;
     margin: 0 auto;
+  }
+  header .redBlock div .logoPokedex {
+    width: 200px;
+    height: 50px;
+    top: 20px;
+  }
+  header .redBlock div .pokebol {
+    width: 70px;
+    height: auto;
+    top: 24px;
   }
 }
 .SearchBox {

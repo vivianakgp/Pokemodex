@@ -15,6 +15,7 @@
         width: 100%;
         position: absolute;
         bottom:0 ;
+        z-index: 50;
         .redBlock{
             background-color:#DD1A1A;
             height: 60%;
@@ -67,6 +68,8 @@
             border-radius: 10px ;
             overflow: hidden;
             font-size: 16px;
+            position: relative;
+            z-index: 100;
             input{
                 height: 100%;
                 width: 65%;

@@ -3,7 +3,7 @@ export const backgroundAccordingToType = (pokemonType) => {
         case'normal':
             return 'linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%)' 
         case'fighting':
-            return 'linear-gradient(176.83deg, #96402A -8.78%, #F1613C 169.09%, #CB735D 242.33%)'
+            return 'linear-gradient(176.83deg, #020024 -8.78%, #F1613C 169.09%, #CB735D 242.33%)'
         case'flying':
             return 'linear-gradient(177.56deg, #62DB60 -58.92%, #3BB039 16.57%, #AAFFA8 209.53%)'
         case'poison':
@@ -24,7 +24,7 @@ export const backgroundAccordingToType = (pokemonType) => {
             return 'linear-gradient(179.57deg, #133258 -70.14%, #1479FB 56.16%, #82B2F1 214.85%)'
         case'grass':
             return 'linear-gradient(178.92deg, #7EC6C5 0.92%, #ABDAC6 47.96%, #CAE099 99.08%)'
-        case'electronic':
+        case'electric':
             return 'linear-gradient(179.75deg, #0C1395 -19.96%, #2B319B 43.67%, #7075D9 138.4%)'
         case'psychic':
             return 'linear-gradient(179.75deg, #020024 -19.96%, #097975 43.67%, #00d4ff 138.4%)'
@@ -39,7 +39,7 @@ export const backgroundAccordingToType = (pokemonType) => {
         case'unknown':
             return 'linear-gradient(179.75deg, #020024 -19.96%, #097975 43.67%, #ff8600 138.4%)'
         default:
-            return 'linear-gradient(179.75deg, #020024  -19.96%, #081179 43.67%, #a5ff00 138.4%)'
+            return 'linear-gradient(179.75deg, 020024#  -19.96%, #081179 43.67%, #a5ff00 138.4%)'
     }
 };
 export const colorAccordingToType = (pokemonType) => {
@@ -47,42 +47,42 @@ export const colorAccordingToType = (pokemonType) => {
         case'normal':
             return '#7C3F4C' 
         case'fighting':
-            return ' #CB735D '
+            return '#271611'
         case'flying':
             return ' #AAFFA8 '
         case'poison':
-            return '#CE9BFF '
+            return '#CE9BFF'
         case'ground':
-            return ' #D69638 '
+            return '#D69638'
         case'rock':
             return '#D3D3D3'
         case'bug':
-            return '#a5ff00 '
+            return '#020024'
         case'ghost':
-            return ' #787DDA '
+            return '#787DDA'
         case'steel':
-            return ' #A8A8A8 '
+            return '#A8A8A8'
         case'fire':
-            return ' #E8AE1B '           
+            return '#E8AE1B'           
         case'water':
-            return ' #82B2F1 '
+            return '#82B2F1'
         case'grass':
-            return ' #CAE099 '
-        case'electronic':
-            return '#7075D9 '
+            return '#CAE099'
+        case'electric':
+            return '#7075D9'
         case'psychic':
-            return ' #00d4ff '
+            return '#00d4ff'
         case'ice':
-            return ' #BDEBFE '
+            return '#BDEBFE'
         case'dragon':
-            return ' #A2BEC1 '
+            return '#A2BEC1'
         case'dark':
-            return ' #5A5E5D '
+            return '#5A5E5D'
         case'fairy':
-            return ' #CD7D98 '
+            return '#CD7D98'
         case'unknown':
-            return ' #ff8600 '
+            return '#ff8600'
         default:
-            return ' #a5ff00 '
+            return '#a5ff00'
     }
 };

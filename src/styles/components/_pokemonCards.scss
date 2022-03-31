@@ -18,6 +18,8 @@
             height: 180px;
             position: relative;
             top: 75px;
+        z-index:100;
+
         img{
             // background-color: rgb(39, 62, 65);
             width: 100%;
@@ -25,15 +27,16 @@
         }
     }
     .containerInfo{
-        background-color: aliceblue;
-        padding-top:54px;
+        background-color: #FFFFFF;
+        padding-top:50px;
         padding-bottom: 10px;
         text-align: center;
         border-radius: 8px 8px 0 0;
 
     } 
     h2{
-        font-size: .9em;
+        position: relative;
+        font-weight: 800;
         z-index:100;
     }
     h2::first-letter{
@@ -55,7 +58,7 @@
         padding-top: 10px;
         margin-bottom: 7px;
         border-top: rgb(179, 177, 177) 1px solid;
-        border-radius: 8px 8px 0 0;
+        // border-radius: 8px 8px 0 0;
     }
     .secStats{
         // background-color: rgb(182, 182, 182);
@@ -70,7 +73,7 @@
 
             }
 
-            p{
+            span{
                 font-size: .6em;
                 margin: 0;
                 color:#9F9F9F;
