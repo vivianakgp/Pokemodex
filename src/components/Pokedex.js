@@ -2,16 +2,25 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+
 import SearchBox from './SearchBox';
 import SelectBox from './SelectBox';
 import PokedexCards from './PokemonCards';
 import Header from './Header';
+import Paginate from './Paginate';
 
 function Pokedex() {
     const [ pokemons, setPokemons ]  = useState([]);
+    // const [ pokemonPerPage ] = useState(10);
+    const pokemonPerPage = 20;
+    const [ currentPage , setCurrenPage ] = useState(1);
+
     const userName = useSelector(state => state.userName);
     useEffect(()=>{
-        axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=60')
+        axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000')
             .then(res =>{
                 console.log(res.data.results);
                 setPokemons(res.data.results)
@@ -20,6 +29,12 @@ function Pokedex() {
     const newPokemonsByType = (typePokemon )=>{
         setPokemons(typePokemon)
     };
+    // get current pokemons
+    const indexOfLastPokemon = currentPage * pokemonPerPage;//1*10= 10 
+    const indexOhFirstPokemon = indexOfLastPokemon - pokemonPerPage;//10-10= 0
+    const currentPokemons = pokemons?.slice(indexOhFirstPokemon, indexOfLastPokemon);
+    // change page
+    const paginate = pageNumber => setCurrenPage(pageNumber);
 
     return (
     <div className='Pokedex'>
@@ -31,10 +46,18 @@ function Pokedex() {
                 <SelectBox newPokemonsByType={newPokemonsByType}/>
             </div>
             <div  className='PokemonList'>{
-                pokemons.map(pokemon => <PokedexCards key={pokemon.url?pokemon.url:pokemon.pokemon.url } pokeUrl={pokemon.url? pokemon.url:pokemon.pokemon.url}/>)
+                currentPokemons.map(pokemon => <PokedexCards key={pokemon.url?pokemon.url:pokemon.pokemon.url } pokeUrl={pokemon.url? pokemon.url:pokemon.pokemon.url}/>)
             }</div>
+            <div className='pagination'>
+                <button className='prevBtn' onClick={()=>setCurrenPage(currentPage-1)} disabled={currentPage<=1}><FontAwesomeIcon icon={faAngleLeft} /></button>
+                <button className='nextBtn' onClick={()=>setCurrenPage(currentPage+1)}><FontAwesomeIcon icon={faAngleRight} /></button>
+                <Paginate
+                pokemonPerPage={pokemonPerPage}
+                totalPokemos={pokemons?.length}
+                paginate={paginate}
+                />
+            </div>
         </div>
-
     </div>
     );
 }

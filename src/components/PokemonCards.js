@@ -14,7 +14,7 @@ function PokemonCards({pokeUrl}) {
                 setPokemon(res.data)
             })
     },[ pokeUrl ]);
-    // const lengthName = pokemon.name.length;
+    // const lengthName = pokemon.name.length; front_shiny front_default
     const pokemonType = pokemon.types?.[0].type.name;
     console.log(pokemon.name?.length)
     const shortName = () => {

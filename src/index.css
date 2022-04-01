@@ -1,8 +1,18 @@
 @charset "UTF-8";
+.Pokedex .container .pagination .nextvBtn, .Pokedex .container .pagination .prevBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #FE1936;
+}
+
 .Pokedex {
+  background-color: rgba(53, 10, 70, 0.986);
   font-size: 30px;
+  padding-bottom: 100px;
 }
 .Pokedex .container {
+  background-color: rgba(255, 255, 255, 0.986);
   padding: 20px;
 }
 .Pokedex .container > h2 {
@@ -11,7 +21,7 @@
 .Pokedex .container > h2 b {
   color: #FE1936;
 }
-.Pokedex .searchBoxes {
+.Pokedex .container .searchBoxes {
   height: 80px;
   display: flex;
   flex-direction: column;
@@ -19,23 +29,29 @@
   justify-content: space-between;
   margin: 20px 0;
 }
-.Pokedex .PokemonList {
+.Pokedex .container .PokemonList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 25px;
 }
-
+.Pokedex .container .pagination {
+  background-color: #e7ebd4;
+  position: relative;
+}
 @media only screen and (min-width: 668px) {
   .Pokedex .container {
     padding: 20px 0;
     max-width: 85%;
     margin: 0 auto;
   }
-  .Pokedex .searchBoxes {
+  .Pokedex .container .searchBoxes {
     flex-direction: row;
     justify-content: start;
+  }
+  .Pokedex .container .pagination {
+    background-color: #cae3f1;
   }
 }
 .Home {
@@ -222,7 +238,6 @@ header {
 header .redBlock {
   height: 68%;
   background-color: #DD1A1A;
-  padding: 0 20px;
 }
 header .redBlock div {
   width: 100%;
@@ -337,6 +352,16 @@ header .blackBlock {
   .SelectBox {
     margin-left: 8px;
   }
+}
+.navPagination {
+  background-color: #12558b;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.navPagination ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
 }
 * {
   margin: 0;
