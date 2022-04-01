@@ -1,32 +1,42 @@
 .navPagination{
-    background-color: rgb(18, 85, 139);
-    max-width: 90%;
-    margin: 0 auto;
-    // overflow-x: scroll;
+    // background-color: rgb(18, 85, 139);
+    width: 70%;
+    overflow-x: scroll;
     // margin-top: 50px;
-    // padding: 5px;
+    // padding: 0 5px;
 
     ul{
-        // color: #97ce4c;
-        // width: fit-content;
-        // background-color: rgb(196, 219, 210);
+        color: #212121;
+        width: fit-content;
         display: flex;
         flex-direction: row;
         list-style: none;
-
-
         li{
-            // width:50px;
-            // height:50px;
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
+            background-color:  rgb(202, 189, 189);
+            width: 38px;
+            height: 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             // font-size: 16px;
             // font-weight: 700;
-            // margin: 6px;
-            // border-radius: 50%;
-            // background-color:  black;
+            margin: 3px;
+            border-radius: 8px;
         }
     }
 
+}
+@media only screen and(min-width:668px){
+    .navPagination{
+        ul{
+            li{
+                width: 40px;
+                height: 40px;
+                // font-size: .8em;
+            }
+
+        }
+
+
+    }
 }

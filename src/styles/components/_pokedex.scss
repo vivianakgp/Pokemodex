@@ -1,15 +1,17 @@
 %paginationBtns{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
     background-color:#FE1936;
+    color: white;
+    border-style: none;
 }
 .Pokedex{
-    background-color: rgba(53, 10, 70, 0.986);
+    // background-color: rgba(53, 10, 70, 0.986);
     font-size: 30px;
     padding-bottom: 100px;
     .container{
-    background-color: rgba(255, 255, 255, 0.986);
+    // background-color: rgba(255, 255, 255, 0.986);
         padding: 20px;
         // h2 child 1
         >h2{
@@ -35,25 +37,29 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            margin-top: 25px;
+            margin: 25px 0;
         }
+        //pagination child 4
         .pagination{
-            background-color: rgb(231, 235, 212);
-            position: relative;
+            // background-color: rgb(63, 235, 226);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .prevBtn{
-                // position: absolute;
-                @extend %paginationBtns;
-                
-            }
-            .nextvBtn{
-                // position: absolute;
                 @extend %paginationBtns;
             }
-
+            .nextBtn{
+                @extend %paginationBtns;
+            }
         }
     }
 }
 @media only screen and(min-width:668px){
+    %paginationBtns{
+        width: 45px;
+        height: 45px;
+        font-size: .8em;
+    }
     .Pokedex{
         // font-size: 40px;
         .container{
@@ -67,7 +73,9 @@
                 justify-content: start;
             }
             .pagination{
-            background-color: rgb(202, 227, 241);
+            // background-color: rgb(202, 227, 241);
+            width: 90%;
+            margin: 0 auto;
 
             }
         }

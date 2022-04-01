@@ -14,11 +14,16 @@ import Paginate from './Paginate';
 
 function Pokedex() {
     const [ pokemons, setPokemons ]  = useState([]);
-    // const [ pokemonPerPage ] = useState(10);
     const pokemonPerPage = 20;
     const [ currentPage , setCurrenPage ] = useState(1);
 
     const userName = useSelector(state => state.userName);
+    // get current pokemons
+    const indexOfLastPokemon = currentPage * pokemonPerPage;//1*10= 10 
+    const indexOhFirstPokemon = indexOfLastPokemon - pokemonPerPage;//10-10= 0
+    const currentPokemons = pokemons?.slice(indexOhFirstPokemon, indexOfLastPokemon);
+    const totalpage = Math.ceil(pokemons.length/pokemonPerPage);
+
     useEffect(()=>{
         axios.get('https://pokeapi.co/api/v2/pokemon?offset=0&limit=1000')
             .then(res =>{
@@ -29,10 +34,6 @@ function Pokedex() {
     const newPokemonsByType = (typePokemon )=>{
         setPokemons(typePokemon)
     };
-    // get current pokemons
-    const indexOfLastPokemon = currentPage * pokemonPerPage;//1*10= 10 
-    const indexOhFirstPokemon = indexOfLastPokemon - pokemonPerPage;//10-10= 0
-    const currentPokemons = pokemons?.slice(indexOhFirstPokemon, indexOfLastPokemon);
     // change page
     const paginate = pageNumber => setCurrenPage(pageNumber);
 
@@ -50,12 +51,12 @@ function Pokedex() {
             }</div>
             <div className='pagination'>
                 <button className='prevBtn' onClick={()=>setCurrenPage(currentPage-1)} disabled={currentPage<=1}><FontAwesomeIcon icon={faAngleLeft} /></button>
-                <button className='nextBtn' onClick={()=>setCurrenPage(currentPage+1)}><FontAwesomeIcon icon={faAngleRight} /></button>
                 <Paginate
                 pokemonPerPage={pokemonPerPage}
                 totalPokemos={pokemons?.length}
                 paginate={paginate}
                 />
+                <button className='nextBtn' onClick={()=>setCurrenPage(currentPage+1)} disabled={currentPage>=totalpage}><FontAwesomeIcon icon={faAngleRight} /></button>
             </div>
         </div>
     </div>
