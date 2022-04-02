@@ -1,0 +1,42 @@
+.pokemonDetail{
+background-color: #E5E5E5;
+.content{
+    background-color: aquamarine;
+    padding: 0 10px;
+    margin: 50px 0;
+    // child 1
+    .banner{
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .containerImage{
+        // background-color: rgb(45, 102, 156);
+        width: 170px;
+        position: relative;
+        top: -15px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    // child 2
+    .mainInfo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    // child 3
+    .stats{
+
+    }
+    // child 4
+    .moments{
+
+    }
+}
+
+}

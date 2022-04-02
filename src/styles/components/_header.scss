@@ -1,6 +1,8 @@
 header{
     width: 100%;
     height: 80px;
+    position: relative;
+    z-index: 150;
     .redBlock{
         height: 68%;
         background-color:#DD1A1A;
