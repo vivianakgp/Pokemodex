@@ -1,8 +1,8 @@
+
 .navPagination{
     // background-color: rgb(18, 85, 139);
     width: 70%;
     overflow-x: scroll;
-    // margin-top: 50px;
     // padding: 0 5px;
 
     ul{
@@ -11,8 +11,10 @@
         display: flex;
         flex-direction: row;
         list-style: none;
+        margin: 0 auto;
+
         li{
-            background-color:  rgb(202, 189, 189);
+            // background-color:  #ff06063b;
             width: 38px;
             height: 38px;
             display: flex;

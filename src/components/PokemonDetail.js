@@ -1,7 +1,7 @@
 import React, {useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-
+import Header from './Header';
 
 function PokemonDetail() {
     const [ pokemonDetail , setPokemonDetail ] = useState({})
@@ -14,12 +14,21 @@ function PokemonDetail() {
                 setPokemonDetail(res.data);
             })
     },[ name ])
+    // <h2>{pokemonDetail.name}</h2>
+
     return (
     <div className='PokemonDetail'>
-        <h2>details</h2>
-        <p>{`Seleccionaste el usuario con el id: ${name}`} </p>
-        <h2>{pokemonDetail.name}</h2>
-        
+        <Header />
+        {/* <div className='content'>
+            <div className='baner'>
+                <div className='containerImage'>
+                    <div><img src={} alt=''/></div>
+                </div>
+            </div>
+            <section className='sec mainInfo'></section>
+            <section className='sec stats'></section>
+            <section  className='sec moments'></section>
+        </div> */}
     </div>
     );
 }

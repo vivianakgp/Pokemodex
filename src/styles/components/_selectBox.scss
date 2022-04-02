@@ -16,10 +16,10 @@
     cursor: pointer;
     font-size: .5em;
     color: rgb(8, 8, 8);
+    background-color: #FFFFFF;
     }
     select::-ms-expand{
         display: none;
-
     }
 }
 .SelectBox::after{

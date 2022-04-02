@@ -4,8 +4,6 @@ import { Link} from 'react-router-dom';
 import axios from 'axios';
 import {backgroundAccordingToType, colorAccordingToType} from '../utilities/cardsBackground';
 
-
-
 function PokemonCards({pokeUrl}) {
     const [ pokemon, setPokemon ] = useState({});
     useEffect(()=>{
@@ -16,7 +14,7 @@ function PokemonCards({pokeUrl}) {
     },[ pokeUrl ]);
     // const lengthName = pokemon.name.length; front_shiny front_default
     const pokemonType = pokemon.types?.[0].type.name;
-    console.log(pokemon.name?.length)
+    // console.log(pokemon.name?.length)
     const shortName = () => {
         if(pokemon.name?.length <= 11) {
             return '.8em'
@@ -35,7 +33,7 @@ function PokemonCards({pokeUrl}) {
                 {/* style={{fontSize:shortName()}} */}
                 <h3>{pokemonType}</h3>
                 <p>TIPO</p>
-                <p className='secStats borderTop'>
+                <section className='secStats borderTop'>
                     <span>
                         <span>HP</span>
                         <h4>{pokemon.stats?.[0].base_stat}</h4>
@@ -44,8 +42,8 @@ function PokemonCards({pokeUrl}) {
                         <span>ATAQUE</span>
                         <h4>{pokemon.stats?.[1].base_stat}</h4>
                     </span>
-                </p>
-                <p className='secStats'>
+                </section>
+                <section className='secStats'>
                     <span>
                         <span>DEFENSA</span>
                         <h4>{pokemon.stats?.[2].base_stat}</h4>
@@ -54,7 +52,7 @@ function PokemonCards({pokeUrl}) {
                         <span>VELOCIDAD</span>
                         <h4>{pokemon?.stats?.[5].base_stat}</h4>
                     </span>
-                </p>
+                </section>
             </div>
         </Link>
     </div>

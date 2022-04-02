@@ -1,8 +1,7 @@
 import React, { useEffect, useState }from "react";
 import axios from 'axios';
 
-const SelectBox = ({newPokemonsByType})=> {
-
+const SelectBox = ({ newPokemonsByType }) => {
     const [ pokemonTypes , setPokemonTypes ] = useState([]);
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/type/')
@@ -16,13 +15,14 @@ const SelectBox = ({newPokemonsByType})=> {
         // console.log(e.target.value);
         axios.get(e.target.value)
         .then(res =>{
-            console.log(res.data.pokemon);
+            // console.log(res.data.pokemon);
             newPokemonsByType(res.data?.pokemon)
         })
     };
     return (
         <div className='SelectBox'>
             <select onChange={getPokemons}>
+            {/* selected disabled */}
                 <option selected disabled>Todos los pokemones</option>
                 {
                 pokemonTypes.map( type =>(

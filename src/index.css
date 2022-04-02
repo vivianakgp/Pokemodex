@@ -337,6 +337,7 @@ header .blackBlock {
   cursor: pointer;
   font-size: 0.5em;
   color: #080808;
+  background-color: #FFFFFF;
 }
 .SelectBox select::-ms-expand {
   display: none;
@@ -371,9 +372,9 @@ header .blackBlock {
   display: flex;
   flex-direction: row;
   list-style: none;
+  margin: 0 auto;
 }
 .navPagination ul li {
-  background-color: #cabdbd;
   width: 38px;
   height: 38px;
   display: flex;
