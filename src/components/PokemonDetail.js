@@ -27,7 +27,6 @@ function PokemonDetail() {
                     <div><img src={pokemonDetail.sprites?.front_default} alt=''/></div>
                 </div>
             </div>
-            {/* style={{wight:'120px',height:'100px', color:'black'}} , flexDirection:'column'*/}
             <section className='mainInfo'>
                 <p style={{color:colorAccordingToType(pokemonType)}}>#{pokemonDetail.id}</p>
                 <div className='h1Container'>
@@ -48,13 +47,13 @@ function PokemonDetail() {
                 <div className='Skills'>
                     <section>
                         <h2>Tipo</h2>
-                        <span>{pokemonDetail.types?.[0].type.name}</span>
-                        <span>{pokemonDetail.types?.[1].type.name}</span>
+                        <span>{pokemonDetail.types?.[0]?.type.name}</span>
+                        <span>{pokemonDetail.types?.[1]?.type.name}</span>
                     </section>
                     <section>
                         <h2>Habilidades</h2>
-                        <span>{pokemonDetail.abilities?.[0].ability.name}</span>
-                        <span>{pokemonDetail.abilities?.[1].ability.name}</span>
+                        <span>{pokemonDetail.abilities?.[0]?.ability.name}</span>
+                        <span>{pokemonDetail.abilities?.[1]?.ability.name}</span>
                     </section>
                 </div>
             </section>

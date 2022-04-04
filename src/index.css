@@ -100,6 +100,7 @@
   flex-direction: column;
   align-items: center;
   margin: 70px auto;
+  text-align: center;
 }
 .Home .container .containerImg {
   width: 90%;
@@ -116,7 +117,6 @@
 }
 .Home .container p {
   font-size: 0.7em;
-  text-align: center;
   margin: 7px 0;
 }
 .Home .container form {
@@ -233,6 +233,7 @@
 
 .pokemonDetail {
   background-color: #E5E5E5;
+  padding-bottom: 100px;
 }
 .pokemonDetail .content {
   font-size: 16px;
@@ -258,7 +259,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px;
+  padding: 40px 10px;
   background-color: #FFFFFF;
 }
 .pokemonDetail .content .mainInfo > p {
@@ -278,12 +279,12 @@
   background-color: transparent;
 }
 .pokemonDetail .content .mainInfo .h1Container .h1Decorection {
-  width: 15%;
+  width: 20%;
 }
 .pokemonDetail .content .mainInfo .h1Container h1 {
   font-size: 1.8em;
   text-align: center;
-  width: 70%;
+  width: 60%;
   position: relative;
   top: -10px;
 }
@@ -304,24 +305,27 @@
   font-weight: 500;
 }
 .pokemonDetail .content .mainInfo .Skills {
-  border: #b9b9b9 0.5px solid;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-top: 20px;
 }
 .pokemonDetail .content .mainInfo .Skills > :nth-child(1) :nth-child(2) {
   background-color: #85C9C5;
   border-style: none;
+  color: #FFFFFF;
 }
 .pokemonDetail .content .mainInfo .Skills > :nth-child(1) :nth-child(3) {
   background-color: #6C3D9A;
   border-style: none;
+  color: #FFFFFF;
 }
 .pokemonDetail .content .mainInfo .Skills section {
   margin: 5px;
   text-align: center;
+  height: 100px;
 }
 .pokemonDetail .content .mainInfo .Skills section h2 {
   font-size: 1.2em;
@@ -333,8 +337,34 @@
   margin: 5px;
   padding: 7px 10px;
   font-size: 1em;
+  min-width: 110px;
   border: #b9b9b9 0.5px solid;
   border-radius: 5px;
+}
+@media only screen and (min-width: 668px) {
+  .pokemonDetail .content {
+    font-size: 20px;
+    max-width: 80%;
+    margin: 75px auto;
+  }
+  .pokemonDetail .content .banner {
+    max-height: 120px;
+  }
+  .pokemonDetail .content .banner .containerImage {
+    width: 220px;
+  }
+  .pokemonDetail .content .mainInfo {
+    padding: 40px 55px;
+  }
+  .pokemonDetail .content .mainInfo .Skills {
+    flex-direction: row;
+  }
+  .pokemonDetail .content .mainInfo .Skills section h2 {
+    margin-bottom: 18px;
+  }
+  .pokemonDetail .content .mainInfo .Skills section > span {
+    display: inline;
+  }
 }
 @keyframes rotate {
   from {
@@ -397,7 +427,6 @@ header .blackBlock {
   }
 }
 .SearchBox {
-  background-color: #FFFFFF;
   min-width: 250px;
   height: 35px;
   position: relative;
@@ -422,7 +451,7 @@ header .blackBlock {
 .SearchBox form span {
   position: absolute;
   right: 15px;
-  top: 0;
+  top: 3px;
   font-size: 20px;
   color: #c7c7c7;
 }

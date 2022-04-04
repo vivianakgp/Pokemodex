@@ -1,20 +1,13 @@
-%contentH1Decoration{
-    background:white;
-    width:15%; 
-    text-align:'center';
-    display:'flex';
-    flex-direction:'column';
-    justify-content:'center';
-}
 .pokemonDetail{
 background-color: #E5E5E5;
+padding-bottom: 100px;
 .content{
     // background-color: aquamarine;
     // font-size: 30px; en desktop
     font-size: 16px;
     padding: 0 10px;
     margin: 60px 0;
-    // child 1
+    ////////////// child 1 //////////////
     .banner{
         max-height: 80px;
         display: flex;
@@ -37,7 +30,7 @@ background-color: #E5E5E5;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 40px;
+        padding: 40px 10px;
         background-color: #FFFFFF;
         >p{
             // background-color:white ;
@@ -56,13 +49,13 @@ background-color: #E5E5E5;
             margin: 10px 0;
             background-color:transparent;
             .h1Decorection{
-                width:15%;
+                width:20%;
             }
             h1{
                 // background-color:rgb(154, 223, 191);
                 font-size: 1.8em;
                 text-align: center;
-                width: 70%;
+                width: 60%;
                 position: relative;
                 top:-10px
             }
@@ -86,58 +79,88 @@ background-color: #E5E5E5;
         }
         .Skills{
             // background-color: rgb(222, 245, 179);
-            border: rgb(185, 185, 185) .5px solid;
+            // border: rgb(185, 185, 185) .5px solid;
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             margin-top: 20px;
             >:nth-child(1){
                 :nth-child(2){
+                    // #85C9C5 #6C3D9A
                     background-color:#85C9C5;
                     border-style:none;
+                    color:#FFFFFF;
                 }
                 :nth-child(3){
                     background-color:#6C3D9A;
                     border-style:none;
+                    color:#FFFFFF
                 }
                 
             }
             section{
                 // background-color: #e74c4c;
-                // width: 50%;
                 margin: 5px;
                 text-align: center;
+                height: 100px;
                 h2{
                     font-size: 1.2em;
                     font-weight: 500;
 
                 }
                 >span{
-
                     background-color: #FFFFFF;
                     display: inline-block;
                     margin: 5px;
                     padding: 7px 10px;
                     font-size: 1em;
+                    min-width: 110px;
                     border: rgb(185, 185, 185) .5px solid;
                     border-radius: 5px;
                 }
- 
-
-
             }
         }
     }
-
     ////////////// child 3 /////////////////////////
     .stats{
-
     }
     ////////////// child 4 //////////////
     .moments{
-
     }
 }
+
+}
+@media only screen and(min-width:668px){
+    .pokemonDetail{
+        // background-color: aqua;
+        .content{
+            font-size: 20px;
+            max-width: 80%;
+            margin: 75px auto;
+                ////////////// child 1 //////////////
+            .banner{
+                max-height: 120px;
+                .containerImage{
+                width: 220px;
+                }
+            }
+            .mainInfo{
+                padding:40px 55px ;
+                .Skills{
+                    flex-direction: row;
+                    section{
+                        h2{
+                        margin-bottom: 18px;
+                        }
+                        >span{
+                            display: inline;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 }
