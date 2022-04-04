@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import {backgroundAccordingToType, colorAccordingToType} from '../utilities/cardsBackground';
+import { backgroundAccordingToType, colorAccordingToType } from '../utilities/cardsBackground';
 
 function PokemonCards({pokeUrl}) {
     const [ pokemon, setPokemon ] = useState({});

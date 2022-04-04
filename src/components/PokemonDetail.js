@@ -1,7 +1,7 @@
-import React, {useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import {backgroundAccordingToType} from '../utilities/cardsBackground';
+import { backgroundAccordingToType, colorAccordingToType } from '../utilities/cardsBackground';
 import Header from './Header';
 
 function PokemonDetail() {
@@ -27,18 +27,35 @@ function PokemonDetail() {
                     <div><img src={pokemonDetail.sprites?.front_default} alt=''/></div>
                 </div>
             </div>
+            {/* style={{wight:'120px',height:'100px', color:'black'}} , flexDirection:'column'*/}
             <section className='mainInfo'>
-                <p>{pokemonDetail.id}</p>
-                <h1>{pokemonDetail.name}</h1>
-                <div>
-                    <sapn>
+                <p style={{color:colorAccordingToType(pokemonType)}}>#{pokemonDetail.id}</p>
+                <div className='h1Container'>
+                    <p className='h1Decorection'><hr/></p>
+                    <h1 style={{color:colorAccordingToType(pokemonType)}}>{pokemonDetail.name}</h1>
+                    <p className='h1Decorection'><hr/></p>
+                </div>
+                <div className='measures'>
+                    <span>
                         <p>Peso</p>
-                        <sapn>{pokemonDetail.height}</sapn>
-                    </sapn>
-                    <sapn>
+                        <span>{pokemonDetail.height}</span>
+                    </span>
+                    <span>
                         <p>Altura</p>
-                        <sapn>{pokemonDetail.weight}</sapn>
-                    </sapn>
+                        <span>{pokemonDetail.weight}</span>
+                    </span>
+                </div>
+                <div className='Skills'>
+                    <section>
+                        <h2>Tipo</h2>
+                        <span>{pokemonDetail.types?.[0].type.name}</span>
+                        <span>{pokemonDetail.types?.[1].type.name}</span>
+                    </section>
+                    <section>
+                        <h2>Habilidades</h2>
+                        <span>{pokemonDetail.abilities?.[0].ability.name}</span>
+                        <span>{pokemonDetail.abilities?.[1].ability.name}</span>
+                    </section>
                 </div>
             </section>
             <section className='sec stats'></section>

@@ -1,39 +1,140 @@
+%contentH1Decoration{
+    background:white;
+    width:15%; 
+    text-align:'center';
+    display:'flex';
+    flex-direction:'column';
+    justify-content:'center';
+}
 .pokemonDetail{
 background-color: #E5E5E5;
 .content{
-    background-color: aquamarine;
+    // background-color: aquamarine;
+    // font-size: 30px; en desktop
+    font-size: 16px;
     padding: 0 10px;
-    margin: 50px 0;
+    margin: 60px 0;
     // child 1
     .banner{
-        height: 90px;
+        max-height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
-
         .containerImage{
         // background-color: rgb(45, 102, 156);
         width: 170px;
+        top:-15px;
         position: relative;
-        top: -15px;
+        // transform: translateY(-20%);
             img{
                 width: 100%;
                 height: 100%;
             }
         }
     }
-    // child 2
+    ////////////// child 2 //////////////
     .mainInfo{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-top: 40px;
+        background-color: #FFFFFF;
+        >p{
+            // background-color:white ;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 1.3em;
+            font-weight: 700;
+            border: rgb(185, 185, 185) .5px solid;
+        }
+        .h1Container{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            margin: 10px 0;
+            background-color:transparent;
+            .h1Decorection{
+                width:15%;
+            }
+            h1{
+                // background-color:rgb(154, 223, 191);
+                font-size: 1.8em;
+                text-align: center;
+                width: 70%;
+                position: relative;
+                top:-10px
+            }
+            h1::first-letter{
+                text-transform: uppercase;
+                font-size: 1.5em;
+            }
+        }
+        .measures{
+            // background-color: wheat;
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            span{
+                margin:0  15px ;
+                font-size: 1em;
+                span{
+                    font-weight: 500;
+                }
+            }
+        }
+        .Skills{
+            // background-color: rgb(222, 245, 179);
+            border: rgb(185, 185, 185) .5px solid;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            >:nth-child(1){
+                :nth-child(2){
+                    background-color:#85C9C5;
+                    border-style:none;
+                }
+                :nth-child(3){
+                    background-color:#6C3D9A;
+                    border-style:none;
+                }
+                
+            }
+            section{
+                // background-color: #e74c4c;
+                // width: 50%;
+                margin: 5px;
+                text-align: center;
+                h2{
+                    font-size: 1.2em;
+                    font-weight: 500;
 
+                }
+                >span{
+
+                    background-color: #FFFFFF;
+                    display: inline-block;
+                    margin: 5px;
+                    padding: 7px 10px;
+                    font-size: 1em;
+                    border: rgb(185, 185, 185) .5px solid;
+                    border-radius: 5px;
+                }
+ 
+
+
+            }
+        }
     }
-    // child 3
+
+    ////////////// child 3 /////////////////////////
     .stats{
 
     }
-    // child 4
+    ////////////// child 4 //////////////
     .moments{
 
     }
