@@ -7,12 +7,10 @@
     border-style: none;
 }
 .Pokedex{
-    // background-color: rgba(53, 10, 70, 0.986);
     font-size: 30px;
     padding-bottom: 100px;
     background-color: #E5E5E5;
     .container{
-    // background-color: rgba(255, 255, 255, 0.986);
         padding: 20px;
         // h2 child 1
         >h2{
@@ -23,7 +21,6 @@
         }
         // searchBoxes child 2
         .searchBoxes{
-            // background-color: rgba(222, 148, 231, 0.507);
             height: 80px;
             display: flex;
             flex-direction: column;
@@ -33,7 +30,6 @@
         }
         //PokemonList child 3
         .PokemonList{
-            // background-color: rgb(12, 11, 11);
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -42,7 +38,6 @@
         }
         //pagination child 4
         .pagination{
-            // background-color: rgb(63, 235, 226);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -62,22 +57,17 @@
         font-size: .8em;
     }
     .Pokedex{
-        // font-size: 40px;
         .container{
             padding: 20px 0;
             max-width: 85%;
             margin:0 auto;
-            // background-color: rgba(202, 54, 207, 0.507);
             .searchBoxes{
-                // background-color: rgb(15, 15, 15);
                 flex-direction: row;
                 justify-content: start;
             }
             .pagination{
-            // background-color: rgb(202, 227, 241);
             width: 90%;
             margin: 0 auto;
-
             }
         }
     }

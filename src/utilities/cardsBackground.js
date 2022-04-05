@@ -1,4 +1,4 @@
-export const backgroundAccordingToType = (pokemonType) => {
+export const backgroundAccordingToType = pokemonType => {
     switch(pokemonType){
         case'normal':
             return 'linear-gradient(181.51deg, #735259 -6.44%, #BC6B7C 121.95%, #7C3F4C 186.11%)' 
@@ -42,7 +42,7 @@ export const backgroundAccordingToType = (pokemonType) => {
             return 'linear-gradient(179.75deg, 020024#  -19.96%, #081179 43.67%, #a5ff00 138.4%)'
     }
 };
-export const colorAccordingToType = (pokemonType) => {
+export const colorAccordingToType = pokemonType => {
     switch(pokemonType){
         case'normal':
             return '#7C3F4C' 

@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -8,14 +7,12 @@ function PokemonCards({pokeUrl}) {
     const [ pokemon, setPokemon ] = useState({});
     useEffect(()=>{
         axios.get(pokeUrl).then(res => {
-                console.log(res.data);
-                setPokemon(res.data)
+                // console.log(res.data);
+                setPokemon(res.data);
             })
     },[ pokeUrl ]);
-    // const lengthName = pokemon.name.length; front_shiny front_default
     const pokemonType = pokemon.types?.[0]?.type.name;
     const pokemonType2 = pokemon.types?.[1]?.type.name;
-    // console.log(pokemon.name?.length)
     const shortName = () => {
         if(pokemon.name?.length <= 11) {
             return '.8em'
@@ -31,7 +28,6 @@ function PokemonCards({pokeUrl}) {
             </div>
             <div className='containerInfo'  style={{color:colorAccordingToType(pokemonType)}} >
                 <h2 style={{fontSize:shortName()}}>{pokemon.name}</h2>
-                {/* style={{fontSize:shortName()}} */}
                 <h3>{pokemonType}/{pokemonType2}</h3>
                 <p>TIPO</p>
                 <section className='secStats borderTop'>

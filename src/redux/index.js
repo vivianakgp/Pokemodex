@@ -1,6 +1,5 @@
 const INITIAL_STATE = {
-  userName:'Mateo',
-
+  userName:'',
 }
 
 const reducer = (state = INITIAL_STATE, action) => {
@@ -11,7 +10,7 @@ const reducer = (state = INITIAL_STATE, action) => {
           userName:action.payload
       }
     default:
-	    return state;
+	  return state;
   }
 }
 

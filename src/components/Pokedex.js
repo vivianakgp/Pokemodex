@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-
+//import components
 import SearchBox from './SearchBox';
 import SelectBox from './SelectBox';
 import PokedexCards from './PokemonCards';
@@ -14,7 +13,6 @@ import Paginate from './Paginate';
 
 function Pokedex() {
     const [ pokemons, setPokemons ]  = useState([]);
-
     const userName = useSelector(state => state.userName);
     // get current pokemons to pagination
     const pokemonPerPage = 20;
@@ -41,7 +39,6 @@ function Pokedex() {
     const paginate = pageNumber => {
         setCurrenPage(pageNumber);
         scrollDiv();
-        // console.log(`pagina actual:${currentPage}`)
     };
 
     return (

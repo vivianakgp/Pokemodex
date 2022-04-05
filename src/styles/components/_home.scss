@@ -1,6 +1,4 @@
-
 .Home{
-    // background-color: rgb(90, 88, 88);
     width: 100%;
     display: flex;
     font-size: 30px;
@@ -34,19 +32,15 @@
     }
 //2.container Home child
     .container{
-        // background-color: rgb(157, 190, 179);
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 70px auto;
         text-align: center;
-
         .containerImg{
-            // background-color: rgb(83, 159, 226);
             width: 90%;
             max-width: 500px;
             margin-bottom: 28px;
-
             img{
                 width: 100%;
                 height: 100%;
@@ -58,11 +52,9 @@
         }
         p{
             font-size: .7em;
-            // text-align: center;
             margin: 7px 0;
         }
         form{
-            // background-color: aliceblue;
             height: 40px;
             width: 300px;
             margin: 28px 0;
@@ -70,8 +62,6 @@
             border-radius: 10px ;
             overflow: hidden;
             font-size: 16px;
-            // position: relative;
-            // z-index: 100;
             input{
                 height: 100%;
                 width: 65%;
@@ -80,8 +70,6 @@
                 border: .3px solid rgba(22, 22, 22, 0.212);
                 border-right: none;
                 border-radius: 10px 0 0 10px;
-    
-
             }
             button{
                 background-color: #D93F3F;
@@ -109,12 +97,9 @@
             }  
         }
         .container{
-            // background-color: violet;
             form{
                 width: 430px;
             }
-    
-
         }
     }
     

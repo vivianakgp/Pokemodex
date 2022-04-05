@@ -6,7 +6,7 @@ const SelectBox = ({ newPokemonsByType }) => {
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/type/')
         .then(res => {
-            console.log(res.data.results);
+            // console.log(res.data.results);
             setPokemonTypes(res.data.results);
         })
     },[]);
@@ -22,10 +22,9 @@ const SelectBox = ({ newPokemonsByType }) => {
     return (
         <div className='SelectBox'>
             <select onChange={getPokemons}>
-            {/* selected disabled */}
                 <option selected disabled>Todos los pokemones</option>
                 {
-                pokemonTypes.map( type =>(
+                pokemonTypes.map( type => (
                     <option key={type.url} value={type.url}>{type.name}</option>
                 ))
             }

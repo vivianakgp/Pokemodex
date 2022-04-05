@@ -1,4 +1,3 @@
-
 import React, {useState}from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -6,19 +5,19 @@ import pokedexImg from '../assets/pokedex.png';
 import pokebol from '../assets/pokeball.png';
 
 function Home() {
-    const [ nameValue, setNameValue ] = useState('')
+    const [ nameValue, setNameValue ] = useState('');
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const chageGlobalState = (e) => {
+    const chageGlobalState = e => {
         e.preventDefault();
-        console.log(nameValue)
         navigate('/pokedex')
         dispatch({
             type:'UPDATE_USER_NAME',
             payload:nameValue
         });
-        setNameValue('')
+        setNameValue('');
     };
+
     return (
     <div className='Home'>
         <div className='container'>
@@ -27,8 +26,7 @@ function Home() {
             </div>
             <h1>¡Hola entrenador!</h1>
             <p>Para poder comenzar, dame tu nombre</p>
-            {/* action='' */}
-            <form  onSubmit={chageGlobalState}>
+            <form onSubmit={chageGlobalState}>
                 <input type='text' value={nameValue}
                 placeholder='Tu nombre...' 
                 required

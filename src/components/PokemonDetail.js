@@ -6,26 +6,26 @@ import Header from './Header';
 import { Chart } from "react-google-charts";
 
 function PokemonDetail() {
-    const [ pokemonDetail , setPokemonDetail ] = useState({})
+    const [ pokemonDetail , setPokemonDetail ] = useState({});
     const { name } = useParams();
 
     useEffect(()=>{
         axios.get(`https://pokeapi.co/api/v2/pokemon/${name}/`)
             .then(res =>{
-                console.log(res.data);
+                // console.log(res.data);
                 setPokemonDetail(res.data);
             })
-    },[ name ])
+    },[ name ]);
     const pokemonType = pokemonDetail.types?.[0].type.name;
     const pokemonType2 = pokemonDetail.types?.[1]?.type.name;
     const pokemonAbility = pokemonDetail.abilities?.[0]?.ability.name;
     const pokemonAbility2 = pokemonDetail.abilities?.[1]?.ability.name;
+    const movementsUntil20 = pokemonDetail.moves?.slice(0, 21);
     // chart data
     const hp = pokemonDetail.stats?.[0].base_stat;
     const attack = pokemonDetail.stats?.[1].base_stat;
     const defense = pokemonDetail.stats?.[2].base_stat;
     const velocity = pokemonDetail.stats?.[5].base_stat;
-
     const data = [
         [
         'Element',
@@ -44,7 +44,6 @@ function PokemonDetail() {
         ['Velocidad', velocity, '#E6901E', null],
     ];
     const options = {
-
         minWidth: 290,
         margin:  'auto',
         height: 300,
@@ -52,14 +51,13 @@ function PokemonDetail() {
         legend: { position: 'none' },
     };
 
-
     return (
     <div className='pokemonDetail'>
         <Header />
         <div className='content'>
             <div className='banner' style={{background:backgroundAccordingToType(pokemonType)}}>
                 <div className='containerImage'>
-                    <div><img src={pokemonDetail.sprites?.other.home.front_default} alt=''/></div>
+                    <div><img src={pokemonDetail.sprites?.other.home.front_default} alt='pokemon'/></div>
                 </div>
             </div>
             <section className='mainInfo'>
@@ -102,7 +100,16 @@ function PokemonDetail() {
                 options={options}
                 />
             </section>
-            <section  className='sec moments'></section>
+            <section  className='move'>
+                <h2>Movements</h2>
+                <ul>
+                    {
+                    movementsUntil20?.map( elem => (
+                        <li>{elem.move.name}</li>
+                    ))
+                    }
+                </ul>
+            </section>
         </div>
     </div>
     );
