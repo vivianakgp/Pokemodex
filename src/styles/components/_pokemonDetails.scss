@@ -1,12 +1,12 @@
 .pokemonDetail{
 background-color: #E5E5E5;
-padding-bottom: 100px;
+padding-bottom: 50px;
 .content{
     // background-color: aquamarine;
     // font-size: 30px; en desktop
     font-size: 16px;
     padding: 0 10px;
-    margin: 60px 0;
+    margin: 70px 0;
     ////////////// child 1 //////////////
     .banner{
         max-height: 80px;
@@ -16,7 +16,7 @@ padding-bottom: 100px;
         .containerImage{
         // background-color: rgb(45, 102, 156);
         width: 170px;
-        top:-15px;
+        top:-25px;
         position: relative;
         // transform: translateY(-20%);
             img{
@@ -30,7 +30,7 @@ padding-bottom: 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 40px 10px;
+        padding: 40px 10px 10px 10px;
         background-color: #FFFFFF;
         >p{
             // background-color:white ;
@@ -104,7 +104,7 @@ padding-bottom: 100px;
                 // background-color: #e74c4c;
                 margin: 5px;
                 text-align: center;
-                height: 100px;
+                // height: 100px;
                 h2{
                     font-size: 1.2em;
                     font-weight: 500;
@@ -112,7 +112,7 @@ padding-bottom: 100px;
                 }
                 >span{
                     background-color: #FFFFFF;
-                    display: inline-block;
+                    // display: inline-block;
                     margin: 5px;
                     padding: 7px 10px;
                     font-size: 1em;
@@ -125,6 +125,16 @@ padding-bottom: 100px;
     }
     ////////////// child 3 /////////////////////////
     .stats{
+        // background: #6C3D9A;
+        background-color: #FFFFFF;
+        padding: 10px;
+        >h2{
+            margin-left: 45px;
+            margin-bottom: 5px;
+            font-size: 1.8em;
+            color:#302F2F;
+            font-weight: 500;
+        }
     }
     ////////////// child 4 //////////////
     .moments{
@@ -138,7 +148,7 @@ padding-bottom: 100px;
         .content{
             font-size: 20px;
             max-width: 80%;
-            margin: 75px auto;
+            margin: 85px auto;
                 ////////////// child 1 //////////////
             .banner{
                 max-height: 120px;
@@ -159,6 +169,9 @@ padding-bottom: 100px;
                         }
                     }
                 }
+            }
+            .stats{
+                padding:0 55px;
             }
         }
     }

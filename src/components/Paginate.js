@@ -10,7 +10,7 @@ const Paginate = ({ pokemonPerPage, totalPokemos, paginate, currentPage }) => {
     }
     const getColor = num => {
         if(num === currentPage){
-            return '#ffffff'
+            return '#FFFFFF'
         }
         }
     return(

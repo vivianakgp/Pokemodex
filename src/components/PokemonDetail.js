@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { backgroundAccordingToType, colorAccordingToType } from '../utilities/cardsBackground';
 import Header from './Header';
+import { Chart } from "react-google-charts";
 
 function PokemonDetail() {
     const [ pokemonDetail , setPokemonDetail ] = useState({})
@@ -15,8 +16,42 @@ function PokemonDetail() {
                 setPokemonDetail(res.data);
             })
     },[ name ])
-    // <h2>{pokemonDetail.name}</h2>
     const pokemonType = pokemonDetail.types?.[0].type.name;
+    const pokemonType2 = pokemonDetail.types?.[1]?.type.name;
+    const pokemonAbility = pokemonDetail.abilities?.[0]?.ability.name;
+    const pokemonAbility2 = pokemonDetail.abilities?.[1]?.ability.name;
+    // chart data
+    const hp = pokemonDetail.stats?.[0].base_stat;
+    const attack = pokemonDetail.stats?.[1].base_stat;
+    const defense = pokemonDetail.stats?.[2].base_stat;
+    const velocity = pokemonDetail.stats?.[5].base_stat;
+
+    const data = [
+        [
+        'Element',
+        'Density',
+        { role: 'style' },
+        {
+            sourceColumn: 0,
+            role: 'annotation',
+            type: 'string',
+            calc: 'stringify',
+        },
+        ],
+        ['Hp', hp, ' #FCD676', null],
+        ['Ataque', attack, '#E6901E', null],
+        ['Defensa', defense,'#FCD676', null],
+        ['Velocidad', velocity, '#E6901E', null],
+    ];
+    const options = {
+
+        minWidth: 290,
+        margin:  'auto',
+        height: 300,
+        bar: { groupWidth: '65%' },
+        legend: { position: 'none' },
+    };
+
 
     return (
     <div className='pokemonDetail'>
@@ -24,7 +59,7 @@ function PokemonDetail() {
         <div className='content'>
             <div className='banner' style={{background:backgroundAccordingToType(pokemonType)}}>
                 <div className='containerImage'>
-                    <div><img src={pokemonDetail.sprites?.front_default} alt=''/></div>
+                    <div><img src={pokemonDetail.sprites?.other.home.front_default} alt=''/></div>
                 </div>
             </div>
             <section className='mainInfo'>
@@ -47,17 +82,26 @@ function PokemonDetail() {
                 <div className='Skills'>
                     <section>
                         <h2>Tipo</h2>
-                        <span>{pokemonDetail.types?.[0]?.type.name}</span>
-                        <span>{pokemonDetail.types?.[1]?.type.name}</span>
+                        <span style={{display:pokemonType?'inline-block':'none'}}>{pokemonType}</span>
+                        <span style={{display:pokemonType2?'inline-block':'none'}}>{pokemonType2}</span>
                     </section>
                     <section>
                         <h2>Habilidades</h2>
-                        <span>{pokemonDetail.abilities?.[0]?.ability.name}</span>
-                        <span>{pokemonDetail.abilities?.[1]?.ability.name}</span>
+                        <span style={{display:pokemonAbility?'inline-block':'none'}}>{pokemonAbility}</span>
+                        <span style={{display:pokemonAbility2?'inline-block':'none'}}>{pokemonAbility2}</span>
                     </section>
                 </div>
             </section>
-            <section className='sec stats'></section>
+            <section className='stats'>
+                <h2>Stats</h2>
+                <Chart
+                chartType='BarChart'
+                width='100%'
+                height='300'
+                data={data}
+                options={options}
+                />
+            </section>
             <section  className='sec moments'></section>
         </div>
     </div>
