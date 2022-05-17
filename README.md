@@ -8,6 +8,9 @@ Pokedex shows a card list of more than 1000 pokemon with images and basic descri
 ![pokedex route](https://github.com/vivianakgp/Pokemondex/blob/main/src/assets/imgReadme/pokemonList.jpeg)
 
 Each card contains the pokemon images, name, type, the number of attak, defense and spead. Additionally the background change acordding to the type of pokemon.
+
+---
+
 ![](https://github.com/vivianakgp/Pokemondex/blob/main/src/assets/imgReadme/pokeCard.jpeg)
 
 Pokemon card has a route of detail page path, here it is described in more detail about it.
@@ -21,7 +24,7 @@ You can also search a pokemon by name or filter them by pokemon type.
 - Create React App
 - React Router
 - Redux
-- React Hooks
+- React Hooks -[Pokeapi](https://pokeapi.co/docs/v2)
 - Responsive Web Design
 - sass
 
