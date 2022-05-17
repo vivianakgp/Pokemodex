@@ -24,7 +24,8 @@ You can also search a pokemon by name or filter them by pokemon type.
 - Create React App
 - React Router
 - Redux
-- React Hooks -[Pokeapi](https://pokeapi.co/docs/v2)
+- React Hooks
+- [Pokeapi](https://pokeapi.co/docs/v2)
 - Responsive Web Design
 - sass
 
